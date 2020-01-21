@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #f2f2f2;
+}
+
+.main-header {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  background-color: #333333;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.main-header .brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 2rem;
+}
+.main-header .main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 5rem;
+}
+.main-nav .nav-link {
+  list-style: none;
+  padding: 1rem;
+  opacity: 0;
+}
+.nav-link a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #f2f2f2;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272727;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+.title-header {
+  font-weight: 300;
+  font-size: 4.5rem;
+}
+.title-header .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1rem;
+  padding-right: 0.05rem;
+  padding-bottom: 0.15rem;
+  line-height: 1rem;
+}
+.title-header .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: #f2f2f2;
+  transform-origin: 0.5 0;
+}
+.title-header .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+.hero-section {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.hero-section img {
+  width: 100%;
+}
+.hero-section .hero-title {
+  position: absolute;
+  bottom: 50%;
+  right: 5%;
+  font-family: "Lobster";
+  font-size: 8rem;
+  color: #272727;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 800ms ease-in-out;
+}
+.hero-section svg {
+  font-family: "Lobster";
+  font-size: 10rem;
+  font-weight: bold;
+
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.hero-section svg text {
+  transition: ease-in-out 1s;
+  transform-origin: center;
+}
+.hero-section svg rect {
+  mask: url(#mask);
+}
+.hero-section svg mask rect {
+  fill: white;
+}
+
+.article-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  grid-gap: 2rem;
+  padding: 8rem;
+  background-color: #272727;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+.article {
+  display: flex;
+  background-color: #dadada;
+  color: #272727;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+}
+.article img {
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+.article-body h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: all ease-in-out 0.3s;
+}
+.article .article-body {
+  padding: 2rem;
+  text-align: justify;
+  transition: all ease-in-out 0.3s;
+}
+
+.article:hover img {
+  transform: scale(1.1);
+}
+.article:hover h3 {
+  transform: translateY(-0.5em);
+}
+.article:hover .article-body {
+  transform: translateY(0.5em);
+}
